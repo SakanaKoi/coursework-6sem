@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6eec636-f7da-487c-b849-ec3b678f545e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/course_work.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hashtags_project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hashtags_project/hashtags_app/hashtags_functionality.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hashtags_project/hashtags_app/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hashtags_project/hashtags_app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="c6eec636-f7da-487c-b849-ec3b678f545e" name="Changes" comment="Added backend">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtags_project/hashtags_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hashtags_project/hashtags_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtags_project/hashtags_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hashtags_project/hashtags_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtags_project/hashtags_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hashtags_project/hashtags_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +63,19 @@
       <option name="presentableId" value="Default" />
       <updated>1716483071163</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added backend">
+      <option name="closed" value="true" />
+      <created>1716485915882</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716485915882</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added backend" />
   </component>
 </project>

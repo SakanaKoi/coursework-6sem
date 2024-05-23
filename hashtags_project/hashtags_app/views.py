@@ -3,9 +3,12 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import TextSerializer, ReplaceHashtagsSerializer
 from .hashtags_functionality import remove_hashtags, get_hashtags, replace_hashtags, count_hashtags
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
 
 class RemoveHashtagsView(APIView):
+    @swagger_auto_schema(request_body=TextSerializer, responses={200: openapi.Response('Success', TextSerializer)})
     def post(self, request):
         serializer = TextSerializer(data=request.data)
         if serializer.is_valid():
@@ -16,6 +19,12 @@ class RemoveHashtagsView(APIView):
 
 
 class GetHashtagsView(APIView):
+    @swagger_auto_schema(request_body=TextSerializer, responses={200: openapi.Response('Success', openapi.Schema(
+        type=openapi.TYPE_OBJECT,
+        properties={
+            'hashtags': openapi.Schema(type=openapi.TYPE_ARRAY, items=openapi.Schema(type=openapi.TYPE_STRING))
+        }
+    ))})
     def post(self, request):
         serializer = TextSerializer(data=request.data)
         if serializer.is_valid():
@@ -26,6 +35,8 @@ class GetHashtagsView(APIView):
 
 
 class ReplaceHashtagsView(APIView):
+    @swagger_auto_schema(request_body=ReplaceHashtagsSerializer,
+                         responses={200: openapi.Response('Success', TextSerializer)})
     def post(self, request):
         serializer = ReplaceHashtagsSerializer(data=request.data)
         if serializer.is_valid():
@@ -37,6 +48,12 @@ class ReplaceHashtagsView(APIView):
 
 
 class CountHashtagsView(APIView):
+    @swagger_auto_schema(request_body=TextSerializer, responses={200: openapi.Response('Success', openapi.Schema(
+        type=openapi.TYPE_OBJECT,
+        properties={
+            'count': openapi.Schema(type=openapi.TYPE_INTEGER)
+        }
+    ))})
     def post(self, request):
         serializer = TextSerializer(data=request.data)
         if serializer.is_valid():

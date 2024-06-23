@@ -1,0 +1,27 @@
+services:
+  back:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+
+  proxy:
+    image: nginx
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    restart: always
+    depends_on:
+      - back
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    volumes:
+      - ./client:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back
